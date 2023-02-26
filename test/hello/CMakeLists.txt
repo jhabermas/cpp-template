@@ -1,4 +1,4 @@
-find_package(catch2 REQUIRED)
+find_package(Catch2 REQUIRED)
 add_executable(hello_test hello_test.cpp)
 target_link_libraries(hello_test PRIVATE Catch2::Catch2WithMain hello)
 target_include_directories(hello_test PRIVATE ${CMAKE_SOURCE_DIR}/include)
