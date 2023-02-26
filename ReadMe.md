@@ -1,6 +1,6 @@
 # cpp-template
 
-C++, CMake and conan repository template with library, app and tests
+C++, CMake and conan repository template with library, app, tests and CI.
 
 ## Building
 
