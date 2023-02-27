@@ -4,6 +4,11 @@ project(hello VERSION 0.1.0)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
+find_program(CLANG_TIDY NAMES "clang-tidy" "clang-tidy-14")
+if(CLANG_TIDY)
+    set(CMAKE_CXX_CLANG_TIDY "clang-tidy;-checks=*")
+endif()
+
 include(CTest)
 enable_testing()
 
