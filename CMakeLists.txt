@@ -13,6 +13,7 @@ include(CTest)
 enable_testing()
 
 add_subdirectory(src)
+add_subdirectory(python)
 add_subdirectory(app)
 add_subdirectory(test)
 
