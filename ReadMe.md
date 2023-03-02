@@ -1,6 +1,7 @@
 # cpp-template
 
 C++, CMake and conan repository template with library, app, tests and CI.
+See `python_bindings` branch for a template with python bindings.
 
 ## Building
 
