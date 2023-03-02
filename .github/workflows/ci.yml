@@ -23,9 +23,16 @@ jobs:
         conan profile detect
         conan install . --output-folder=build --build=missing
 
-    - name: Build and Test
+    - name: Build and Test C++
       run: |
         cd build
         cmake .. -DCMAKE_TOOLCHAIN_FILE=conan_toolchain.cmake -DCMAKE_BUILD_TYPE=Release
         cmake --build .
+        cmake --install .
         ctest -V
+
+    - name: Build & Test Python Package
+      run: |
+        pip install .
+        pip install python/tests/requirements.txt
+        pytest
